@@ -1,7 +1,6 @@
 let greatingNumber = 10;
 let greatingText = "Hello, World!CX";
 let hobbies = ["Reading", "Coding", "Hiking"];
-let yearsAsDeveloper = 0;
 
 let person = {
   name: "John Doe",
@@ -9,14 +8,16 @@ let person = {
   isEmployed: true,
 };
 
-function calculateAge(person) {
-  yearsAsDeveloper = person.age - 18; // Assuming the person started working at age 20
+function calculateAge(personAge) {
+  return personAge - 18;
 }
-calculateAge(person);
+
+let yearsAsDeveloper = 0;
+yearsAsDeveloper = calculateAge(person.age);
 alert(yearsAsDeveloper);
 
 person.age = 31; // Update age
-calculateAge(person); // Recalculate years as developer
+yearsAsDeveloper = calculateAge(person.age); // Recalculate years as developer
 alert(yearsAsDeveloper);
 
 // alert(hobbies[0]);
